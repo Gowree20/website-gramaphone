@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
+  background-color: #FDF6E6; /* Updated background color */
+}
+
+/* Header */
+header {
+  background: #1A3C3D; /* Updated header background */
+  color: #FDF6E6; /* Updated header text color */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #FDF6E6; /* Updated navigation link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  opacity: 0.7;
+  color: #388285; /* Updated hover color */
+}
+
+/* Main Content */
+main {
+  flex: 1; /* Allows the main content to grow and take up remaining space */
+  padding: 2rem;
+}
+
+.hero {
+  position: relative;
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  color: #FDF6E6; /* Updated hero text color */
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 60, 61, 0.5); /* Semi-transparent overlay */
+  z-index: 0;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+}
+
+.hero .cta {
+  position: relative;
+  z-index: 1;
+  background: #295f61; /* Updated button background color */
+  color: #FDF6E6; /* Updated button text color */
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero .cta:hover {
+  background: #1A3C3D; /* Updated hover color */
+}
+
+/* Footer */
+footer {
+  background: #1A3C3D; /* Updated footer background */
+  color: #FDF6E6; /* Updated footer text color */
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  margin-top: auto; /* Pushes the footer to the bottom when content is less */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.product-card {
+  border: 1px solid #295f61; /* Updated border color */
+  padding: 1rem;
+  text-align: center;
+  flex: 1 1 calc(33.33% - 1rem); /* 3 items per row with gap */
+  max-width: calc(33.33% - 1rem);
+  box-shadow: 0 4px 6px rgba(41, 95, 97, 0.1); /* Updated shadow color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #FDF6E6; /* Updated card background */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  background: #295f61; /* Updated button background */
+  color: #FDF6E6; /* Updated button text color */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+  background: #1A3C3D; /* Updated hover color */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(41, 95, 97, 0.2); /* Updated shadow color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+.hero-logo {
+  
+  opacity: 0.7;
+  max-width: 200px; /* Adjust the size of the logo */
+  margin: 0 auto 1rem; /* Centers the logo and adds spacing below */
+  display: block; /* Ensures it's treated as a block element */
+}
+.hero h1 {
+  font-family: 'Permanent Marker', cursive; /* Apply the new font */
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: normal;
+  color: #D1CB75; /* Adjust color */
+  margin-top: 1rem;
+  text-transform: uppercase; /* Optional: if you want it all in uppercase */
+  letter-spacing: 1px; /* Optional: adds some spacing between letters */
+}
+@font-face {
+  font-family: 'Caitiff';
+  src: url('fonts/Caitiff-Regular.ttf') format('truetype');
+}
+
+.logo-text {
+  font-family: 'Caitiff', sans-serif; /* Apply Caitiff font */
+  font-size: 3rem; /* Adjust font size */
+  color: #FDF6E6; /* Change text color if necessary */
+}
